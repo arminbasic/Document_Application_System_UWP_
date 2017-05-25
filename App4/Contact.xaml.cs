@@ -13,20 +13,19 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace App4
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class Contact : Page
     {
-        public MainPage()
+        public Contact()
         {
             this.InitializeComponent();
         }
-
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
             splitView1.IsPaneOpen = !splitView1.IsPaneOpen;
@@ -40,23 +39,9 @@ namespace App4
             else if (adminn.IsSelected) Frame.Navigate(typeof(AdminMode));
         }
 
-        private void buttonApplyMP_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(ApplyPage1));
-        }
-
-        private void buttonLearnMoreAbout_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(About));
-        }
-
-        private void buttonContact_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Contact));
-        }
-
         private void Back_Click(object sender, RoutedEventArgs e)
-        { if(Frame.CanGoBack)
+        {
+            if (Frame.CanGoBack)
             Frame.GoBack();
         }
     }
